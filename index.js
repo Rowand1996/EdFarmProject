@@ -108,7 +108,7 @@ app.get("/orders/customer/:id", (req, res) => {
 
 
 app.listen(port, () => {
-    //console.log(req)
     console.log(`Listening on port ${port}! lets ride.`)
 })
+
 
