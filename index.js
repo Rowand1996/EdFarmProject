@@ -95,7 +95,7 @@ app.get("/orders/:id", (req, res) => {
     } 
 })
 
-app.get("/orders/customer/:id", (req, res) => {
+app.get("/orders/customers/:id", (req, res) => {
     
     for (let i = 0; i < orders.length; i++){
         if (orders[i].customer.id === req.params.id){
