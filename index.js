@@ -8,7 +8,7 @@ app.use(bodyParser.json())
 
 
 
-const port = 3000
+const port = process.env.PORT
 let customerOrders = []
 const orders =  [
     {
