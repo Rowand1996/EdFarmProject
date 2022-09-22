@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 
 const port = process.env.PORT
-let customerOrders = []
+
 const orders =  [
     {
         id: "607dc689-56f9-4b11-9171-b242f9558b1f",
@@ -87,7 +87,6 @@ app.get("/", (req, res) => {
 })
 
 app.get("/orders/:id", (req, res) => {
-    
     for (let i = 0; i < orders.length; i++){
         if (orders[i].id === req.params.id){
             res.json(orders[i])
@@ -96,7 +95,7 @@ app.get("/orders/:id", (req, res) => {
 })
 
 app.get("/orders/customers/:id", (req, res) => {
-    
+    let customerOrders = []
     for (let i = 0; i < orders.length; i++){
         if (orders[i].customer.id === req.params.id){
             customerOrders.push(orders[i])
